@@ -1,0 +1,16 @@
+img {
+    border-radius: 5px;
+    width: 50%;
+    height: 50%;
+}
+img:hover{
+    transform: scale(4.5);
+    transition: 0.9ms;
+}
+
+#images>img{
+     margin: 1px;
+     float: left;
+     width: 20px;
+     height: 20px;
+}

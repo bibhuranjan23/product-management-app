@@ -1,0 +1,44 @@
+<h1>Product Lists</h1>
+<hr>
+<table class="table table-border table-hover">
+    <caption></caption>
+    <thead>
+       <tr>
+        <th>#</th>
+        <th>title</th>
+        <th>description</th>
+        <th>price</th>
+        <th>discountPercentage</th>
+        <th>rating</th>
+        <th>stock</th>
+        <th>brand</th>
+        <th>category</th>
+        <th>thumbnail</th>
+        <th>images</th>
+        <th>Action</th>
+       </tr>
+    </thead>
+    <tbody *ngFor="let prodcut of products">
+        <tr>
+            <td>{{prodcut.id}}</td>
+            <td>{{prodcut.title}}</td>
+            <td>{{prodcut.description}}</td>
+            <td>{{prodcut.price}}</td>
+            <td>{{prodcut.discountPercentage}}</td>
+            <td>{{prodcut.rating}}</td>
+            <td>{{prodcut.stock}}</td>
+            <td>{{prodcut.brand}}</td>
+            <td>{{prodcut.category}}</td>
+            <td><img src="{{prodcut.thumbnail}}" alt=""/></td>
+            <td>
+                <div id="images" *ngFor="let image of prodcut.images">
+                    <img src="{{image}}" alt=""/>
+                </div>
+            </td>
+            <td>
+                <button class="btn" title="Edit"><i class="fa fa-pencil text-info"></i></button>
+                <button class="btn" title="Delete" (click)="deleteProduct(prodcut.id)"><i class="fa fa-trash text-danger"></i></button>
+            </td>
+        </tr>
+    </tbody>
+</table>
