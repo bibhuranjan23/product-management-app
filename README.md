@@ -1,6 +1,10 @@
 # ProductManagementApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.3.
+## Instruction
+- Clone The project to local repo
+- run npm install
+- then run the project
 
 ## Development server
 
