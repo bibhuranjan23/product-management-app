@@ -1,0 +1,31 @@
+<div class="form-container">
+    
+
+    <div [ngSwitch]="currentStep">
+      <div *ngSwitchCase="1">
+        <h2>Step 1: Personal Information</h2>
+        <!-- Step 1 Form Fields -->
+        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="Last Name">
+        <button (click)="nextStep()">Next</button>
+      </div>
+      <div *ngSwitchCase="2">
+        <h2>Step 2: Contact Details</h2>
+        <!-- Step 2 Form Fields -->
+        <input type="email" placeholder="Email">
+        <input type="tel" placeholder="Phone Number">
+        <button (click)="prevStep()">Previous</button>
+        <button (click)="nextStep()">Next</button>
+      </div>
+      <div *ngSwitchCase="3">
+        <h2>Step 3: Address</h2>
+        <!-- Step 3 Form Fields -->
+        <input type="text" placeholder="Street Address">
+        <input type="text" placeholder="City">
+        <input type="text" placeholder="State">
+        <button (click)="prevStep()">Previous</button>
+        <button (click)="submitForm()">Submit</button>
+      </div>
+    </div>
+  </div>
+  

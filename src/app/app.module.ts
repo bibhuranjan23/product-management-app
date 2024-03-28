@@ -10,6 +10,12 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
+import { MultitabDemoComponent } from './multitab-demo/multitab-demo.component';
+import { MultiformDemoComponent } from './multiform-demo/multiform-demo.component';
+import { TestDirective } from './test.directive';
+import { IfDemoComponent } from './if-demo/if-demo.component';
+import { MyCustomDirectiveDirective } from './my-custom-directive.directive';
+import { MyStructuralDirectiveDirective } from './my-structural-directive.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +25,13 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
     ProductListComponent,
     ProductAddComponent,
     ErrorPageComponent,
-    ProductEditComponent
+    ProductEditComponent,
+    MultitabDemoComponent,
+    MultiformDemoComponent,
+    TestDirective,
+    IfDemoComponent,
+    MyCustomDirectiveDirective,
+    MyStructuralDirectiveDirective
   ],
   imports: [
     BrowserModule,

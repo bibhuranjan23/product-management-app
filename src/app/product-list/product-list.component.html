@@ -18,27 +18,30 @@
         <th>Action</th>
        </tr>
     </thead>
-    <tbody *ngFor="let prodcut of products">
-        <tr>
-            <td>{{prodcut.id}}</td>
-            <td>{{prodcut.title}}</td>
-            <td>{{prodcut.description}}</td>
-            <td>{{prodcut.price}}</td>
-            <td>{{prodcut.discountPercentage}}</td>
-            <td>{{prodcut.rating}}</td>
-            <td>{{prodcut.stock}}</td>
-            <td>{{prodcut.brand}}</td>
-            <td>{{prodcut.category}}</td>
-            <td><img src="{{prodcut.thumbnail}}" alt=""/></td>
-            <td>
-                <div id="images" *ngFor="let image of prodcut.images">
-                    <img src="{{image}}" alt=""/>
-                </div>
-            </td>
-            <td>
-                <button class="btn" title="Edit"><i class="fa fa-pencil text-info"></i></button>
-                <button class="btn" title="Delete" (click)="deleteProduct(prodcut.id)"><i class="fa fa-trash text-danger"></i></button>
-            </td>
-        </tr>
+    <tbody >
+        @for(product of products;track product.id){
+            <tr>
+                <td>{{product.id}}</td>
+                <td>{{product.title}}</td>
+                <td>{{product.description}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.discountPercentage}}</td>
+                <td>{{product.rating}}</td>
+                <td>{{product.stock}}</td>
+                <td>{{product.brand}}</td>
+                <td>{{product.category}}</td>
+                <td><img src="{{product.thumbnail}}" alt=""/></td>
+                <td>
+                    <div id="images" *ngFor="let image of product.images">
+                        <img src="{{image}}" alt=""/>
+                    </div>
+                </td>
+                <td>
+                    <button class="btn" title="Edit"><i class="fa fa-pencil text-info"></i></button>
+                    <button class="btn" title="Delete" (click)="deleteProduct(product.id)"><i class="fa fa-trash text-danger"></i></button>
+                </td>
+            </tr>
+        }
+        
     </tbody>
 </table>

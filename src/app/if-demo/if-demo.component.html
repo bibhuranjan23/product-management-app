@@ -1,0 +1,94 @@
+<div>
+    <input type="radio" (click)="validate('valid')" name="rbtValid" value="Valid"/>Valid
+    <input type="radio" (click)="validate('invalid')" name="rbtValid" value="InValid"/>Invalid
+</div>
+
+<p *ngIf="isValid;then block1 else block2 ">Check</p>
+
+<ng-template #block1>
+    <div >
+        <h1>This is Valid </h1>
+    </div>
+</ng-template>
+
+
+<ng-template #block2>
+    <div>
+        <h1>This is InValid</h1>
+    </div>
+</ng-template>
+
+<h1>NGFor Demo</h1>
+<h5>Book List :</h5>
+<ol>
+     <li *ngFor="let book of books">{{book}}</li>
+</ol>
+
+<h1>List of Movies</h1>
+
+<ol class="list-group">
+    <li class="list-group-item" *ngFor="let movie of movies">
+      {{movie.title}}
+    </li>
+</ol>
+
+
+<h1>Movies Table</h1>
+<table class="table">
+    <tr class="bg-dark text-light">
+    <th>#</th>
+    <th>title</th>
+    <th>director</th>
+    <th>cast</th>
+    <th>releaseDate</th> 
+    <th>IsFirst</th>   
+    <th>IsLast</th> 
+    <th>IsEven</th>
+    <th>IsOdd</th>  
+    </tr>
+    <tr *ngFor="let movie of movies;let i=index;let isFirst=first;let isLast=last;let isEven=even;let isOdd=odd">
+      <td>{{i+1}}</td>
+      <td>{{movie.title}}</td>
+      <td>{{movie.director}}</td>
+      <td>{{movie.cast}}</td>
+      <td>{{movie.releaseDate}}</td>
+      <td>{{isFirst}}</td>
+      <td>{{isLast}}</td>
+      <td>{{isEven}}</td>
+      <td>{{isOdd}}</td>
+    </tr>
+</table>
+
+<div class="row">
+    @for(movie of movies;track movie){
+        <div class="col-3 p-3" >
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                    {{movie.title}}
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">{{movie.director}}</li>
+                  <li class="list-group-item">{{movie.cast}}</li>
+                  <li class="list-group-item">{{movie.releaseDate}}</li>
+                </ul>
+              </div>
+        </div>
+        
+    }
+    
+</div>
+
+<div appMyCustomDirective>
+    <h1>My Custom Directive</h1>
+</div>
+
+
+<h1>My Custome Directive </h1>
+    <div *appMyStructuralDirective="false">
+    This content will be shown if the condition is 
+    true.
+    </div>
+    <div *appMyStructuralDirective="true">
+    This content will be removed if the condition is 
+    false.
+    </div>
