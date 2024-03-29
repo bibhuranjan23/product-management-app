@@ -16,6 +16,8 @@ import { TestDirective } from './test.directive';
 import { IfDemoComponent } from './if-demo/if-demo.component';
 import { MyCustomDirectiveDirective } from './my-custom-directive.directive';
 import { MyStructuralDirectiveDirective } from './my-structural-directive.directive';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeCountComponent } from './employee-count/employee-count.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { MyStructuralDirectiveDirective } from './my-structural-directive.direct
     TestDirective,
     IfDemoComponent,
     MyCustomDirectiveDirective,
-    MyStructuralDirectiveDirective
+    MyStructuralDirectiveDirective,
+    EmployeeListComponent,
+    EmployeeCountComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 import { IfDemoComponent } from './if-demo/if-demo.component';
 import { MultitabDemoComponent } from './multitab-demo/multitab-demo.component';
 import { MultiformDemoComponent } from './multiform-demo/multiform-demo.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
 const routes: Routes = [
    {path:'',component:ProductListComponent},
    {path:'product-list',component:ProductListComponent},
@@ -15,6 +16,8 @@ const routes: Routes = [
    {path:'if-demo',component:IfDemoComponent},
    {path:'multi-form',component:MultiformDemoComponent},
    {path:'multi-tab',component:MultitabDemoComponent},
+   {path:'employees',component:EmployeeListComponent},
+   
    {path:'**',component:ErrorPageComponent}
 ];
 
