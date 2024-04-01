@@ -18,6 +18,9 @@ import { MyCustomDirectiveDirective } from './my-custom-directive.directive';
 import { MyStructuralDirectiveDirective } from './my-structural-directive.directive';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeCountComponent } from './employee-count/employee-count.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { MyTitlePipe } from './my-title.pipe';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { EmployeeCountComponent } from './employee-count/employee-count.componen
     MyCustomDirectiveDirective,
     MyStructuralDirectiveDirective,
     EmployeeListComponent,
-    EmployeeCountComponent
+    EmployeeCountComponent,
+    ParentComponent,
+    ChildComponent,
+    MyTitlePipe
   ],
   imports: [
     BrowserModule,

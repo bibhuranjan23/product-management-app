@@ -1,0 +1,23 @@
+<!-- <h1>Welcome to {{title}}!</h1>
+
+<p>Parent Component's Couter Value :{{Counter}}</p>
+
+<app-child [count]="Counter" (countChanged)="countChangedHandler($event)"></app-child> -->
+<p> current count is {{xyz.count}} </p>
+<button (click)="xyz.increment()">Increment</button>
+<button (click)="xyz.decrement()">decrement</button>
+<app-child  #xyz></app-child >
+
+ <h1>Date Of Birth : {{dob}}</h1> 
+ <h1>Date Of Birth : {{dob | date}}</h1>     
+ <h1>Date Of Birth : {{dob | date :"short"}}</h1>  
+ <h1>Date Of Birth : {{dob | date :"fullDate"}}</h1>  
+ <h1>Date Of Birth : {{dob | date :"medium"}}</h1>  
+ <h1>Date Of Birth : {{dob | date :"dd/MM/YYYY"}}</h1> 
+
+ <h1>{{user | json}}</h1>
+
+ <p>{{months | slice : 2:12}}</p>
+
+ <h1>{{value| percent}}</h1>
+ <h1>{{value| number:'10.4'}}</h1>

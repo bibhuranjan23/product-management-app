@@ -8,6 +8,7 @@ import { IfDemoComponent } from './if-demo/if-demo.component';
 import { MultitabDemoComponent } from './multitab-demo/multitab-demo.component';
 import { MultiformDemoComponent } from './multiform-demo/multiform-demo.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { ParentComponent } from './parent/parent.component';
 const routes: Routes = [
    {path:'',component:ProductListComponent},
    {path:'product-list',component:ProductListComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
    {path:'multi-form',component:MultiformDemoComponent},
    {path:'multi-tab',component:MultitabDemoComponent},
    {path:'employees',component:EmployeeListComponent},
+   {path:'parent',component:ParentComponent},
    
    {path:'**',component:ErrorPageComponent}
 ];

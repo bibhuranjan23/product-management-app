@@ -12,7 +12,7 @@
         </tr>
         <tr *ngFor="let employee of employees">
             <td>{{employee.id}}</td>
-            <td>{{employee.name}}</td>
+            <td>{{employee.name | myTitle:employee.gender}}</td>
             <td>{{employee.gender}}</td>
             <td>{{employee.salary}}</td>
         </tr>
