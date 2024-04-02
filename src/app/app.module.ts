@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +22,7 @@ import { EmployeeCountComponent } from './employee-count/employee-count.componen
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { MyTitlePipe } from './my-title.pipe';
+import { UserListComponent } from './user-list/user-list.component';
 
 @NgModule({
   declarations: [
@@ -41,12 +43,14 @@ import { MyTitlePipe } from './my-title.pipe';
     EmployeeCountComponent,
     ParentComponent,
     ChildComponent,
-    MyTitlePipe
+    MyTitlePipe,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
