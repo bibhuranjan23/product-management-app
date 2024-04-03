@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Product} from '../product';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -8,6 +9,9 @@ import { Product} from '../product';
 export class ProductListComponent {
 
    products : Product[] = [];
+   constructor(private router:Router){
+
+   }
    ngOnInit(){
     this.getProducts();
    }
@@ -23,6 +27,12 @@ export class ProductListComponent {
                  localStorage.setItem("products",JSON.stringify(this.products));
             }
         }
+   }
+
+   editPtoduct(productId:number){
+    this.router.navigate(
+      ['/product-edit',productId] 
+      ); 
    }
 
 

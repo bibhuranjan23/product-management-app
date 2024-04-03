@@ -10,10 +10,23 @@ import { MultiformDemoComponent } from './multiform-demo/multiform-demo.componen
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { ParentComponent } from './parent/parent.component';
 import { UserListComponent } from './user-list/user-list.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 const routes: Routes = [
    {path:'',component:ProductListComponent},
-   {path:'product-list',component:ProductListComponent},
-   {path:'product-edit',component:ProductEditComponent},
+   {
+      path:'product-list',component:ProductListComponent,
+      children:[
+        {
+           path:'product-details',component:ProductDetailsComponent,
+           children:[
+            {path:'product-edit/:id',component:ProductEditComponent}
+           ]
+        },
+        
+      ]
+    },
+  
+   
    {path:'product-add',component:ProductAddComponent},
    {path:'if-demo',component:IfDemoComponent},
    {path:'multi-form',component:MultiformDemoComponent},

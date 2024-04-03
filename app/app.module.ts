@@ -23,6 +23,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { MyTitlePipe } from './my-title.pipe';
 import { UserListComponent } from './user-list/user-list.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { UserListComponent } from './user-list/user-list.component';
     ParentComponent,
     ChildComponent,
     MyTitlePipe,
-    UserListComponent
+    UserListComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

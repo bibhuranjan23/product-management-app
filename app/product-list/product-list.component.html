@@ -37,7 +37,8 @@
                     </div>
                 </td>
                 <td>
-                    <button class="btn" title="Edit"><i class="fa fa-pencil text-info"></i></button>
+                    <button class="btn" title="View" [routerLink]="['/product-list/product-details']"><i class="fa fa-eye text-info"></i></button>
+                    <button class="btn" title="Edit" [routerLink]="['/product-list/product-details/product-edit',product.id]"><i class="fa fa-pencil text-info"></i></button>
                     <button class="btn" title="Delete" (click)="deleteProduct(product.id)"><i class="fa fa-trash text-danger"></i></button>
                 </td>
             </tr>
@@ -45,3 +46,6 @@
         
     </tbody>
 </table>
+<hr/>
+<router-outlet></router-outlet>
+
